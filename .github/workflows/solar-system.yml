@@ -28,7 +28,7 @@ jobs:
           run: actions/cache@v4.2.4
           with: 
             path: ~/.npm
-            key: '${{ runner.os }}-node-modules-${{ hashFiles(''package-json'') }}'
+            key: '${{ runner.os }}-node-modules-${{ hashFiles(''package-lock.json'') }}'
     
         - name: Install Dependencies
           run: npm install
@@ -69,6 +69,7 @@ jobs:
             path: coverage
             retention-days: 5
         
+
 
 
 
