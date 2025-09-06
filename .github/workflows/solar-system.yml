@@ -25,7 +25,7 @@ jobs:
             node-version: 20
 
         - name: Cache NPM depedencies
-          run: actions/cache@v4.2.4
+          uses: actions/cache@v4.2.4
           with: 
             path: ~/.npm
             key: '${{ runner.os }}-node-modules-${{ hashFiles(''package-lock.json'') }}'
@@ -69,6 +69,7 @@ jobs:
             path: coverage
             retention-days: 5
         
+
 
 
 
